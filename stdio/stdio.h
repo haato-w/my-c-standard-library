@@ -10,9 +10,9 @@
 # include "../stdlib/stdlib.h"
 # include "../string/string.h"
 
-void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char *s, int fd);
-void	ft_putendl_fd(char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
+void	putchar_fd(char c, int fd);
+void	putstr_fd(char *s, int fd);
+void	putendl_fd(char *s, int fd);
+void	putnbr_fd(int n, int fd);
 
 #endif
