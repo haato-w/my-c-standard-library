@@ -1,21 +1,21 @@
 # I move all functions to each directories.
 # This Makefile have been modified yet.
 
-SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
-			ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c \
-			ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c \
-			ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c \
-			ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c \
-			ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c \
-			ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c \
-			ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c \
-			ft_putendl_fd.c ft_putnbr_fd.c
+SRCS = _isalpha.c _isdigit.c _isalnum.c _isascii.c \
+			_isprint.c _strlen.c _memset.c _bzero.c \
+			_memcpy.c _memmove.c _strlcpy.c _strlcat.c \
+			_toupper.c _tolower.c _strchr.c _strrchr.c \
+			_strncmp.c _memchr.c _memcmp.c _strnstr.c \
+			_atoi.c _calloc.c _strdup.c _substr.c \
+			_strjoin.c _strtrim.c _split.c _itoa.c \
+			_strmapi.c _striteri.c _putchar_fd.c _putstr_fd.c \
+			_putendl_fd.c _putnbr_fd.c
 
 OBJS = $(SRCS:.c=.o)
 
-BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c \
-				ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c	ft_lstiter_bonus.c \
-				ft_lstmap_bonus.c
+BONUS = _lstnew_bonus.c _lstadd_front_bonus.c _lstsize_bonus.c _lstlast_bonus.c \
+				_lstadd_back_bonus.c _lstdelone_bonus.c _lstclear_bonus.c	_lstiter_bonus.c \
+				_lstmap_bonus.c
 
 BONUS_OBJS		= $(BONUS:.c=.o)
 
@@ -23,7 +23,7 @@ CC				= cc
 RM				= rm -f
 CFLAGS			= -Wall -Wextra -Werror
 
-NAME = libft.a
+NAME = libs.a
 
 all:	$(NAME)
 
