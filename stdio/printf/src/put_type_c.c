@@ -1,16 +1,4 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   put_type_c.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: haatwata <haatwata@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/08 03:02:33 by haatwata          #+#    #+#             */
-/*   Updated: 2025/02/09 15:08:21 by haatwata         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-#include "ft_printf.h"
+#include "printf.h"
 
 int	put_type_c(va_list *ap, int width)
 {
@@ -25,6 +13,6 @@ int	put_type_c(va_list *ap, int width)
 	}
 	else
 		ret = 1;
-	ft_putchar_fd(content, 1);
+	putchar_fd(content, 1);
 	return (ret);
 }

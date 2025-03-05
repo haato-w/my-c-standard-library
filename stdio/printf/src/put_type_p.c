@@ -1,16 +1,4 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   put_type_p.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: haatwata <haatwata@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/08 03:02:47 by haatwata          #+#    #+#             */
-/*   Updated: 2025/02/09 16:19:42 by haatwata         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-#include "ft_printf.h"
+#include "printf.h"
 
 static int	ptr_len(uintptr_t ptr_uint)
 {
@@ -52,7 +40,7 @@ int	put_type_p(va_list *ap, int width)
 	content = va_arg(*ap, void *);
 	if (content == NULL)
 	{
-		ft_putstr_fd("(nil)", 1);
+		putstr_fd("(nil)", 1);
 		ret = 5;
 	}
 	else
