@@ -7,12 +7,12 @@
 # include <limits.h>
 # include <stdint.h>
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-int		ft_toupper(int c);
-int		ft_tolower(int c);
+int		isalpha(int c);
+int		isdigit(int c);
+int		isalnum(int c);
+int		isascii(int c);
+int		isprint(int c);
+int		toupper(int c);
+int		tolower(int c);
 
 #endif
