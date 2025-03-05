@@ -1,18 +1,6 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: haatwata <haatwata@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/07 18:32:51 by haatwata          #+#    #+#             */
-/*   Updated: 2025/02/10 21:33:43 by haatwata         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#include "getline.h"
 
-#include "get_next_line_bonus.h"
-
-static	int	ft_getc(int fd)
+static	int	getc(int fd)
 {
 	static t_file	file[OPEN_MAX];
 	ssize_t			tmp;
@@ -45,7 +33,7 @@ static void	appendc(t_string *s, char c)
 		if (s->buf_size == (ssize_t)0)
 		{
 			s->buf_size = (ssize_t)42;
-			s->buf = (char *)ft_calloc(s->buf_size, sizeof(char));
+			s->buf = (char *)calloc(s->buf_size, sizeof(char));
 			if (s->buf == NULL)
 				return ;
 		}
@@ -53,10 +41,10 @@ static void	appendc(t_string *s, char c)
 		{
 			tmp = s->buf;
 			s->buf_size *= 2;
-			s->buf = (char *)ft_calloc(s->buf_size, sizeof(char));
+			s->buf = (char *)calloc(s->buf_size, sizeof(char));
 			if (s->buf == NULL)
 				return ;
-			ft_memcpy(s->buf, tmp, s->len);
+			memcpy(s->buf, tmp, s->len);
 			free(tmp);
 		}
 	}
@@ -83,7 +71,7 @@ static char	*return_process(t_string *string, int new_c)
 	return (string->buf);
 }
 
-char	*get_next_line(int fd)
+char	*getline(int fd)
 {
 	int				new_c;
 	t_string		string;
@@ -93,7 +81,7 @@ char	*get_next_line(int fd)
 	init_string(&string);
 	while (1)
 	{
-		new_c = ft_getc(fd);
+		new_c = getline(fd);
 		if (new_c == EOF || new_c == -2)
 			break ;
 		appendc(&string, new_c);
@@ -114,19 +102,19 @@ char	*get_next_line(int fd)
 //     fd = open("get_next_line.c", O_RDONLY);
 //     // fd2 = open("get_next_line.h", O_RDONLY);
 
-//     // test ft_getc
+//     // test getc
 //     // while (1) {
-//     //     int c = ft_getc(fd);
+//     //     int c = getc(fd);
 //     //     if (c == (-1))
 //     //       break;
 //     //     printf("%c", c);
 //     // }
 
-//     // test get_next_line
+//     // test getline
 //     while (1)
 //     {
-//       char *s = get_next_line(fd);
-//       // char *s2 = get_next_line(fd2);
+//       char *s = getline(fd);
+//       // char *s2 = getline(fd2);
 //       if (s == NULL)
 //       {
 //         break;
