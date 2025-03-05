@@ -1,16 +1,4 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: haatwata <haatwata@student.42tokyo.jp>     +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/22 00:01:19 by haatwata          #+#    #+#             */
-/*   Updated: 2024/03/22 00:35:32 by haatwata         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-#include "libft.h"
+#include "stdlib.h"
 
 static	char	*remove_space(const char *str)
 {
@@ -80,7 +68,7 @@ static	long long	str2long(char *str, bool positive)
 	return (ret);
 }
 
-int	ft_atoi(const char *str)
+int	atoi(const char *str)
 {
 	char		*removed_str;
 	bool		positive;
@@ -107,8 +95,8 @@ int	ft_atoi(const char *str)
 // 	char *s2 = "111";
 // 	char *s3 = "";
 // 	char *s4 = " ---+--+";
-// 	printf("%d\n", ft_atoi(s1));
-// 	printf("%d\n", ft_atoi(s2));
-// 	printf("%d\n", ft_atoi(s3));
-// 	printf("%d\n", ft_atoi(s4));
+// 	printf("%d\n", atoi(s1));
+// 	printf("%d\n", atoi(s2));
+// 	printf("%d\n", atoi(s3));
+// 	printf("%d\n", atoi(s4));
 // }
