@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "stdlib.h"
 
 static	int	count_n_length(int n)
 {
@@ -39,13 +39,13 @@ static	char	*make_res_arr(int n, int n_len, char *ret_arr)
 	return (ret_arr);
 }
 
-char	*itoa(int n)
+char	*__itoa(int n)
 {
 	int		n_len;
 	char	*ret;
 
 	n_len = count_n_length(n);
-	ret = calloc(sizeof(char), n_len + 1);
+	ret = _calloc(sizeof(char), n_len + 1);
 	if (ret == NULL)
 		return (NULL);
 	ret[n_len] = '\0';
@@ -63,23 +63,23 @@ char	*itoa(int n)
 // {
 // 	int i1 = 1234;
 //   printf("i1: %d\n", i1);
-//   printf("%s\n", itoa(i1));
+//   printf("%s\n", _itoa(i1));
 //   int i2 = -1234;
 //   printf("i2: %d\n", i2);
-//   printf("%s\n", itoa(i2));
+//   printf("%s\n", _itoa(i2));
 //   int i3 = 0;
 //   printf("i3: %d\n", i3);
-//   printf("%s\n", itoa(i3));
+//   printf("%s\n", _itoa(i3));
 //   int i4 = INT_MAX;
 //   printf("INT_MAX: %d\n", INT_MAX);
-//   printf("%s\n", itoa(i4));
+//   printf("%s\n", _itoa(i4));
 //   int i5 = INT_MIN;
 //   printf("INT_MIN: %d\n", INT_MIN);
-//   printf("%s\n", itoa(i5));
+//   printf("%s\n", _itoa(i5));
 //   int i6 = 1;
 //   printf("1: %d\n", i6);
-//   printf("%s\n", itoa(i6));
+//   printf("%s\n", _itoa(i6));
 //   int i7 = -1;
 //   printf("-1: %d\n", i7);
-//   printf("%s\n", itoa(i7));
+//   printf("%s\n", _itoa(i7));
 // }

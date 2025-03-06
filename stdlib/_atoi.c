@@ -68,7 +68,7 @@ static	long long	str2long(char *str, bool positive)
 	return (ret);
 }
 
-int	atoi(const char *str)
+int	_atoi(const char *str)
 {
 	char		*removed_str;
 	bool		positive;
@@ -95,8 +95,8 @@ int	atoi(const char *str)
 // 	char *s2 = "111";
 // 	char *s3 = "";
 // 	char *s4 = " ---+--+";
-// 	printf("%d\n", atoi(s1));
-// 	printf("%d\n", atoi(s2));
-// 	printf("%d\n", atoi(s3));
-// 	printf("%d\n", atoi(s4));
+// 	printf("%d\n", _atoi(s1));
+// 	printf("%d\n", _atoi(s2));
+// 	printf("%d\n", _atoi(s3));
+// 	printf("%d\n", _atoi(s4));
 // }
