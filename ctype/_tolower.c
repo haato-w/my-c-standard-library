@@ -1,4 +1,4 @@
-int	ft_tolower(int c)
+int	_tolower(int c)
 {
 	if ('A' <= (char)c && (char)c <= 'Z')
 	{

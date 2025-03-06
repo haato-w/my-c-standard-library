@@ -1,18 +1,12 @@
 #ifndef CTYPE_H
 # define CTYPE_H
-# include <unistd.h>
-# include <stdbool.h>
-# include <stdlib.h>
-# include <stdbool.h>
-# include <limits.h>
-# include <stdint.h>
 
-int		isalpha(int c);
-int		isdigit(int c);
-int		isalnum(int c);
-int		isascii(int c);
-int		isprint(int c);
-int		toupper(int c);
-int		tolower(int c);
+int		_isalpha(int c);
+int		_isdigit(int c);
+int		_isalnum(int c);
+int		_isascii(int c);
+int		_isprint(int c);
+int		_toupper(int c);
+int		_tolower(int c);
 
 #endif

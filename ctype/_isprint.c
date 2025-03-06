@@ -1,4 +1,4 @@
-int	ft_isprint(int c)
+int	_isprint(int c)
 {
 	if (c <= 31 || 127 <= c)
 		return (0);

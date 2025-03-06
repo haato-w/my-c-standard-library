@@ -1,4 +1,4 @@
-int	ft_toupper(int c)
+int	_toupper(int c)
 {
 	if ('a' <= (char)c && (char)c <= 'z')
 		c -= 32;
