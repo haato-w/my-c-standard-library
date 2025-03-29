@@ -6,8 +6,7 @@
 # include <stdint.h>
 # include <stdio.h>
 # include <stdbool.h>
-# include "../../stdlib/stdlib.h"
-# include "../../string/string.h"
+# include "../stdio.h"
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
