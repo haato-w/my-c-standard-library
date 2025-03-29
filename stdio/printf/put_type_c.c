@@ -1,4 +1,4 @@
-#include "printf.h"
+#include "_printf.h"
 
 int	put_type_c(va_list *ap, int width)
 {
@@ -13,6 +13,6 @@ int	put_type_c(va_list *ap, int width)
 	}
 	else
 		ret = 1;
-	putchar_fd(content, 1);
+	_putchar_fd(content, 1);
 	return (ret);
 }

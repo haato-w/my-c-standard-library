@@ -1,4 +1,4 @@
-#include "printf.h"
+#include "_printf.h"
 
 void	put_space(int width)
 {
@@ -7,7 +7,7 @@ void	put_space(int width)
 	i = 0;
 	while (i < width)
 	{
-		putchar_fd(' ', 1);
+		_putchar_fd(' ', 1);
 		i++;
 	}
 }
@@ -34,8 +34,8 @@ void	put_ptr_as_hex(uintptr_t ptr_uint)
 		buffer[j] = reverse_buffer[i - j - 1];
 		j++;
 	}
-	putstr_fd("0x", 1);
-	putstr_fd(buffer, 1);
+	_putstr_fd("0x", 1);
+	_putstr_fd(buffer, 1);
 }
 
 int	base_n_len(unsigned int value, unsigned int n)
@@ -63,7 +63,7 @@ static void	reverse_buffer(
 	{
 		buffer[j] = rev_buffer[buf_len - j - 1];
 		if (is_big)
-			buffer[j] = toupper(buffer[j]);
+			buffer[j] = _toupper(buffer[j]);
 		j++;
 	}
 }
@@ -78,7 +78,7 @@ void	put_as_base_n(unsigned int value, unsigned int n, bool is_big)
 	hex_digits = "0123456789abcdef";
 	if (value == 0)
 	{
-		putchar_fd(hex_digits[0], 1);
+		_putchar_fd(hex_digits[0], 1);
 		return ;
 	}
 	rev_buffer[0] = '\0';
@@ -89,5 +89,5 @@ void	put_as_base_n(unsigned int value, unsigned int n, bool is_big)
 		value /= n;
 	}
 	reverse_buffer(i, buffer, rev_buffer, is_big);
-	putstr_fd(buffer, 1);
+	_putstr_fd(buffer, 1);
 }

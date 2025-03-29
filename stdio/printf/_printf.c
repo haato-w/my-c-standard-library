@@ -1,4 +1,4 @@
-#include "printf.h"
+#include "_printf.h"
 
 static int	put_specifier_content(const char *format, va_list *ap, int width)
 {
@@ -20,7 +20,7 @@ static int	put_specifier_content(const char *format, va_list *ap, int width)
 		return (put_type_x(ap, width, true));
 	else if (*format == '%')
 	{
-		putchar_fd('%', 1);
+		_putchar_fd('%', 1);
 		return (1);
 	}
 	return (0);
@@ -32,15 +32,15 @@ static int	process_specifier(const char **format, va_list *ap)
 	int	ret;
 
 	(*format)++;
-	width = atoi(*format);
-	while (isdigit(**format))
+	width = _atoi(*format);
+	while (_isdigit(**format))
 		(*format)++;
 	ret = put_specifier_content(*format, ap, width);
 	(*format)++;
 	return (ret);
 }
 
-static int	vprintf(const char *format, va_list *ap)
+static int	_vprintf(const char *format, va_list *ap)
 {
 	size_t	ret;
 
@@ -51,7 +51,7 @@ static int	vprintf(const char *format, va_list *ap)
 			ret += process_specifier(&format, ap);
 		else
 		{
-			putchar_fd(*format, 1);
+			_putchar_fd(*format, 1);
 			format++;
 			ret++;
 		}
@@ -65,7 +65,7 @@ int	printf(const char *format, ...)
 	size_t	ret;
 
 	va_start(ap, format);
-	ret = vprintf(format, &ap);
+	ret = _vprintf(format, &ap);
 	va_end(ap);
 	return (ret);
 }

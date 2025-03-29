@@ -1,9 +1,13 @@
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
+# include <unistd.h>
+# include <stdbool.h>
+# include <stdint.h>
 # include <stdarg.h>
+# include "../stdio.h"
 
-int		printf(const char *format, ...);
+int		_printf(const char *format, ...);
 void	put_space(int width);
 void	put_ptr_as_hex(uintptr_t ptr_uint);
 int		base_n_len(unsigned int value, unsigned int n);

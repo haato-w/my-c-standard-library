@@ -1,4 +1,4 @@
-#include "printf.h"
+#include "_printf.h"
 
 static int	ptr_len(uintptr_t ptr_uint)
 {
@@ -40,7 +40,7 @@ int	put_type_p(va_list *ap, int width)
 	content = va_arg(*ap, void *);
 	if (content == NULL)
 	{
-		putstr_fd("(nil)", 1);
+		_putstr_fd("(nil)", 1);
 		ret = 5;
 	}
 	else
