@@ -39,7 +39,7 @@ static	char	*make_res_arr(int n, int n_len, char *ret_arr)
 	return (ret_arr);
 }
 
-char	*__itoa(int n)
+char	*_itoa(int n)
 {
 	int		n_len;
 	char	*ret;
