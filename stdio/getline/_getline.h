@@ -1,11 +1,13 @@
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_LINE_H
+# define GET_LINE_H
 
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdint.h>
 # include <stdio.h>
 # include <stdbool.h>
+# include "../../stdlib/stdlib.h"
+# include "../../string/string.h"
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
@@ -29,8 +31,6 @@ typedef struct s_string
 	size_t		buf_size;
 }	t_string;
 
-char	*getline(int fd);
-void	*calloc(size_t count, size_t size);
-void	*memcpy(void *dst, const void *src, size_t n);
+char	*_getline(int fd);
 
 #endif

@@ -1,6 +1,6 @@
-#include "getline.h"
+#include "_getline.h"
 
-static	int	getc(int fd)
+static	int	_getc(int fd)
 {
 	static t_file	file[OPEN_MAX];
 	ssize_t			tmp;
@@ -33,7 +33,7 @@ static void	appendc(t_string *s, char c)
 		if (s->buf_size == (ssize_t)0)
 		{
 			s->buf_size = (ssize_t)42;
-			s->buf = (char *)calloc(s->buf_size, sizeof(char));
+			s->buf = (char *)_calloc(s->buf_size, sizeof(char));
 			if (s->buf == NULL)
 				return ;
 		}
@@ -44,7 +44,7 @@ static void	appendc(t_string *s, char c)
 			s->buf = (char *)calloc(s->buf_size, sizeof(char));
 			if (s->buf == NULL)
 				return ;
-			memcpy(s->buf, tmp, s->len);
+			_memcpy(s->buf, tmp, s->len);
 			free(tmp);
 		}
 	}
@@ -71,7 +71,7 @@ static char	*return_process(t_string *string, int new_c)
 	return (string->buf);
 }
 
-char	*getline(int fd)
+char	*_getline(int fd)
 {
 	int				new_c;
 	t_string		string;
@@ -81,7 +81,7 @@ char	*getline(int fd)
 	init_string(&string);
 	while (1)
 	{
-		new_c = getline(fd);
+		new_c = _getc(fd);
 		if (new_c == EOF || new_c == -2)
 			break ;
 		appendc(&string, new_c);
