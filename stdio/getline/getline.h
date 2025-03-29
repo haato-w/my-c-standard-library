@@ -11,7 +11,9 @@
 #  define BUFFER_SIZE 42
 # endif
 
+#ifndef __APPLE__
 # define OPEN_MAX 1000
+#endif
 
 typedef struct s_file
 {
