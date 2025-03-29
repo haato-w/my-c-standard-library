@@ -6,13 +6,15 @@
 # include <stdbool.h>
 # include <limits.h>
 # include <stdint.h>
+# include "getline/_getline.h"
+# include "printf/printf.h"
 # include "../ctype/ctype.h"
 # include "../stdlib/stdlib.h"
 # include "../string/string.h"
 
-void	putchar_fd(char c, int fd);
-void	putstr_fd(char *s, int fd);
-void	putendl_fd(char *s, int fd);
-void	putnbr_fd(int n, int fd);
+void	_putchar_fd(char c, int fd);
+void	_putstr_fd(char *s, int fd);
+void	_putendl_fd(char *s, int fd);
+void	_putnbr_fd(int n, int fd);
 
 #endif

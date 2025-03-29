@@ -1,9 +1,9 @@
-#include "libft.h"
+#include "stdio.h"
 
-void	putendl_fd(char *s, int fd)
+void	_putendl_fd(char *s, int fd)
 {
-	putstr_fd(s, fd);
-	putchar_fd('\n', fd);
+	_putstr_fd(s, fd);
+	_putchar_fd('\n', fd);
 }
 
 // int main(void)

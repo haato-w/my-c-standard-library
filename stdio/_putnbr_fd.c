@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "stdio.h"
 
 static	int	count_n_length(long n)
 {
@@ -29,7 +29,7 @@ static	void	put_digit_fd(long n, int fd)
 	write(fd, &c, 1);
 }
 
-void	putnbr_fd(int n, int fd)
+void	_putnbr_fd(int n, int fd)
 {
 	long	t;
 

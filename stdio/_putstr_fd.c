@@ -1,10 +1,10 @@
-#include "libft.h"
+#include "stdio.h"
 
-void	putstr_fd(char *s, int fd)
+void	_putstr_fd(char *s, int fd)
 {
 	size_t	s_len;
 
-	s_len = strlen(s);
+	s_len = _strlen(s);
 	write(fd, s, s_len);
 }
 

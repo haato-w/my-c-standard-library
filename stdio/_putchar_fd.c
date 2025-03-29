@@ -1,6 +1,6 @@
-#include "libft.h"
+#include "stdio.h"
 
-void	putchar_fd(char c, int fd)
+void	_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
