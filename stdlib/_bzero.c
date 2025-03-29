@@ -2,7 +2,7 @@
 
 void	_bzero(void *s, size_t n)
 {
-	memset(s, 0, n);
+	_memset(s, 0, n);
 }
 
 // #include <stdio.h>
